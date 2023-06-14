@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome To Rice Aroma</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo"><img src="images/logo.png" alt="Rice Aroma Logo"></a>
+            <ul> 
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="montage.html">Montage</a></li>
+                <li><a href = "review.html">FAQs</a></li>
+            </ul>   
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <div class="hero">
+            <h1>Welcome to Rice Aroma!</h1>
+            <p>Whether you're in the mood for something savory or sweet, we have something for you. From the aroma, 
+                savory and different kinds of rice, our menu is designed to satisfy your cravings in just a simple rice.<br></p> 
+            <p>We believe that having a great rice should be accessible to everyone, which is why we offer affordable prices and a welcoming atmosphere.<br></p>
+            <p>So come to Rice Aroma and experience our delicious, accessible meal.</p>
+            <a href="#contact" class="button">Contact Us Now!</a>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <h1>Our Best Seller</h1>
+        
+        <div class="menu-item">
+            <img src="images/image2.jpg" alt="AromaRice">
+            <h3>Aroma Rice</h3>
+            <p>Aroma Rice is a flavorful and aromatic rice dish that will tantalize your taste buds. 
+                Made with a perfect blend of fragrant herbs and spices, every mouthful is a burst of delightful flavors.</p>
+            <span class="price">₱15.99</span>
+        </div>
+        <div class="menu-item">
+            <img src="images/image3.jpg" alt="GarlicRice">
+            <h3>Garlic Rice</h3>
+            <p>Our Garlic Rice is a fragrant and mouthwatering side dish that perfectly complements any main course. 
+                We take fluffy and aromatic rice and infuse it with a rich and tantalizing garlic flavor. </p>
+            <span class="price">₱12.99</span>
+            </button>
+        </div>
+        <div class="menu-item">
+            <img src="images/image4.jpg" alt="RiceBowl">
+            <h3>Rice Bowl W/ Siomai</h3>
+            <p>A satisfying combination of flavors and textures. This dish features a generous serving of steamed
+                 rice topped with savory siomai dumplings made from a special blend of meats and seasonings.</p>
+            <span class="price">₱18.99</span>
+            </button>
+        </div>
+        <div class="menu-item">
+            <img src="images/image5.png" alt="Shanghai">
+            <h3>Rice Shanghai</h3>
+            <p>It is a stir-fried rice dish that features a harmonious blend of flavors and textures.
+                It often includes succulent shrimp, tender pieces of chicken, and an assortment of colorful vegetables.
+            </p>
+            <span class="price">₱25.99</span>
+        </div>
+        <button class="view-menu-button" onclick="window.location.href='menu.html'">
+            <i class="fas fa-shopping-cart"></i>
+            View All Menu
+        </button>
+        
+    </section>
+    
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form id = "contactForm">
+            <h3>ricearoma7@gmail.com</h3>
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <script>
+        const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = form.elements.name.value;
+  const email = form.elements.email.value;
+  const message = form.elements.message.value;
+
+  if (!name || !email || !message) {
+    alert('Please fill out the form.');
+  } else {
+    alert('Email Sent!');
+    form.reset();
+  }
+});
+    </script>
+    
+    
+    <footer>
+        <p>&copy; 2023 Rice Aroma. All rights reserved.</p>
+    </footer>
+    <button id="scrollToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+
+    <script>
+        const scrollToTopButton = document.getElementById('scrollToTopBtn');
+
+        scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

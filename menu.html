@@ -1,0 +1,358 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Rice Aroma - Menu</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="menu.js"></script>
+        <style>
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .modal-content {
+                background-image: url(images/menu.png);
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                max-width: 600px;
+            }
+
+            .modal-close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .modal-close:hover,
+            .modal-close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            #show-cart-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+    }
+
+    #show-cart-btn:hover {
+    background-color: gray;
+    }
+
+    #show-cart-btn:active {
+    background-color: white;
+    }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#home" class="logo"><img src="images/logo.png" alt="Rice Aroma Logo"></a>
+                <ul> 
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="montage.html">Montage</a></li>
+                    <li><a href = "review.html">FAQs</a></li>
+
+                </ul>   
+            </nav>
+        </header>
+
+        <section id="menu" class="section">
+            <h1>Our Menu</h1><button id="show-cart-btn" onclick="showCart()">View Your Cart</button>
+
+            <h2>Main Dish</h2>
+            <div class="menu-item">
+                <img src="images/image2.jpg" alt="AromaRice">
+                <h3>Aroma Rice</h3>
+                <p>Aroma Rice is a flavorful and aromatic rice dish that will tantalize your taste buds. 
+                    Made with a perfect blend of fragrant herbs and spices, every mouthful is a burst of delightful flavors.</p>
+                <span class="price">₱15.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="AromaRice" data-price="15.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="menu-item">
+                <img src="images/image3.jpg" alt="GarlicRice">
+                <h3>Garlic Rice</h3>
+                <p>Our Garlic Rice is a fragrant and mouthwatering side dish that perfectly complements any main course. 
+                    We take fluffy and aromatic rice and infuse it with a rich and tantalizing garlic flavor. </p>
+                <span class="price">₱12.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="GarlicRice" data-price="12.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="menu-item">
+                <img src="images/image4.jpg" alt="RiceBowl">
+                <h3>Rice Bowl W/ Siomai</h3>
+                <p>A satisfying combination of flavors and textures. This dish features a generous serving of steamed
+                    rice topped with savory siomai dumplings made from a special blend of meats and seasonings.</p>
+                <span class="price">₱18.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="RiceBowl" data-price="18.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="menu-item">
+                <img src="images/image5.png" alt="Shanghai">
+                <h3>Rice Shanghai</h3>
+                <p>It is a stir-fried rice dish that features a harmonious blend of flavors and textures.
+                    It often includes succulent shrimp, tender pieces of chicken, and an assortment of colorful vegetables.
+                </p>
+                <span class="price">₱25.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Shanghai" data-price="25.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div> 
+            <div class="menu-item">
+                <img src="images/Chinese Fried Rice.jpg" alt="Chinese Fried Rice">
+                <h3>Chinese Fried Rice</h3>
+                <p>Turn your day-old rice into this delicious Chao Fan. This Chinese-style vegetable-studded fried rice is 
+                    super easy to make and is as good as anything you've had at your fave Chinese restaurants!
+                </p>
+                <span class="price">₱20.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Chinese Fried" data-price="20.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="menu-item">
+                <img src="images/jewelled persian.jpg" alt="jewelled">
+                <h3>Jewelled Persian Rice</h3>
+                <p>Almost too pretty to eat, this rice dish can serve as the best accessory to buffet entertaining or as part of a vegetarian meal or snack.
+                </p>
+                <span class="price">₱35.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Jewelled" data-price="35.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/Stewed pinto beans.jpg" alt="Stewed">
+                <h3>Stewed Pinto Rice</h3>
+                <p> 
+                    Cooked with a fresh herb blend and smoked crayfish, giving it that uniquely African flavor that will get everyone talking.
+                </p>
+                <span class="price">₱30.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Stewed Pinto" data-price="30.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/Yangzhou Chaofan.jpg" alt="Yangzhou">
+                <h3>Yangzhou Chaopan</h3>
+                <p> 
+                    popular Chinese-style wok fried rice dish in many Chinese restaurants throughout the world.
+                </p>
+                <span class="price">₱32.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Yangzhou" data-price="32.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/bangus chaofan.jpg" alt="Bangus">
+                <h3>Bangus Chaopan</h3>
+                <p> 
+                    Bangus chaofan is a Filipino meal featuring fried rice, bangus, rice, veggies, soy sauce, garlic, and other seasonings, served as a main course.
+                </p>
+                <span class="price">₱30.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Bangus" data-price="30.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/beef chaofan.jpg" alt="Beef">
+                <h3>Beef Chaopan</h3>
+                <p> 
+                    BBeef chaofan is a stir-fried rice dish made with cooked rice, beef slices, vegetables, and marinated in soy sauce, ginger, garlic, and other spices.
+                </p>
+                <span class="price">₱38.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Beef" data-price="38.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/beef salpicao.jpg" alt="Salpicao">
+                <h3>Beef Salpicao</h3>
+                <p> 
+                    Beef salpicao chaofan is a filling one-dish supper with fried rice, carrots, peas, and green onions.
+                </p>
+                <span class="price">₱28.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Salpicao" data-price="28.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/beef shawarma.jpg" alt="Shawarma">
+                <h3>Beef Shawarma</h3>
+                <p> 
+                    Middle Eastern beef shawarma rice is a delectable dish that mixes rice and Middle Eastern shawarma.
+                </p>
+                <span class="price">₱35.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Shawarma" data-price="35.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/burger steak wih chaofan.jpg" alt="Burger Steak">
+                <h3>Burger Steak Chaopan</h3>
+                <p> 
+                    Burger steak patty is grilled, broiled, or pan-fried, served with rice.
+                </p>
+                <span class="price">₱31.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Burger Steak" data-price="31.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/kimchi beef fried rice.jpg" alt="kimchi">
+                <h3>Kimchi Beef Fried Rice</h3>
+                <p> 
+                    Kimchi beef chaofan is a popular fusion dish that blends Chinese and Korean cuisine.
+                </p>
+                <span class="price">₱50.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Kimchi" data-price="50.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+            <div class="menu-item">
+                <img src="images/shanghai chaofan.jpg" alt="shanghai">
+                <h3>Shanghai Chaofan</h3>
+                <p> 
+                    Is a stir-fried rice dish made with cooked rice, meat, vegetables, sauces, and seasonings.
+                    
+                </p>
+                <span class="price">₱35.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Shanghai" data-price="35.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </section>
+
+
+
+        <section id="drinks" class="section">
+            <h2>Drinks</h2>
+            <div class="menu-item">
+                <img src="images/drink1.png" alt="Iced Tea">
+                <h3>Iced Tea</h3>
+                <p>Enjoy a refreshing glass of iced tea to complement your meal.</p>
+                <span class="price">₱30.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Iced Tea" data-price="30.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="menu-item">
+                <img src="images/drink2.png" alt="Soft">
+                <h3>Soft Drinks</h3>
+                <p>Quench your thirst with our refreshing soft drinks.</p>
+                <span class="price">₱20.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Soft Drinks" data-price="20.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/drink3.png" alt="Water">
+                <h3>Water</h3>
+                <p>Indulge in the natural taste of pure water.</p>
+                <span class="price">₱15.99</span>
+                <input type="number" min="1" value="1" class="item-quantity">
+                <button class="add-to-cart" onClick="addToCart" data-item="Water Bottle" data-price="15.99">
+                    <i class="fas fa-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </section>
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeCartModal()">&times;</span>
+                <h2>Your Cart</h2>
+                <ul id="cart-items"></ul>
+                <p id="cart-total">Total: ₱0.00</p>
+                <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+                <button class="buy-now" onclick="placeOrder()">Buy Now</button>
+            </div>
+        </div>
+            
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Rice Aroma. All rights reserved.</p>
+        </footer>
+
+        <button id="scrollToTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <script>
+            const scrollToTopButton = document.getElementById('scrollToTopBtn');
+
+            scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+        </script>   
+        <script src="script.js"></script>
+        
+    </body>
+    </html>

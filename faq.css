@@ -1,0 +1,70 @@
+#faq {
+    background-image: url(images/about.png);
+    background-size: cover;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+
+.review {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.review img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    flex: 1;
+}
+
+.review h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: wheat;
+}
+
+.review p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    margin-top: 0;
+    white-space: normal;
+}
+
+.section .faq {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.section .faq h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: wheat;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section .faq p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #eee;
+}
+
+
+
+

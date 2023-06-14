@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rice Aroma - Reviews</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo"><img src="images/logo.png" alt="Rice Aroma Logo"></a>
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="montage.html">Montage</a></li>
+            </ul>   
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <div class="hero">
+            <h1>Customer Reviews</h1>
+            <div class="review">
+                <div class="review-text">
+                    <img src="review/hesper.jpg" alt="hesper">
+                    <h3>Hesper Evangelista</h3>
+                    <p>"The Aroma Rice is amazing! The flavors are so rich and the aroma is mouthwatering. Highly recommended!"</p>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review-text">
+                <img src="review/mack.jpg" alt="mack">
+                <h3>Mack Pereye</h3>
+                <p>"I absolutely love the Garlic Rice! It's the perfect side dish and adds so much flavor to my meals. Can't get enough of it!"</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="review">
+            <div class="review-text">
+            <img src="review/leah.jpg" alt="leah">
+            <h3>Leah Delgado</h3>
+            <p>"The Fried Rice at Rice Aroma is absolutely delicious! <br>
+                It has the perfect balance of flavors, and the portion size is generous.
+                <br> I always leave satisfied!"</p>
+        </div>
+    </div>
+    </div>
+    <div class="review">
+        <div class="review-text">
+            <img src="review/rovic.jpg" alt="rovic">
+            <h3>Rovic Ongog</h3>
+            <p>"I'm a regular customer at Rice Aroma, and I can't get enough of their Special Rice Bowl. 
+                <br>The combination of ingredients and spices is simply fantastic. Highly recommended!"</p>
+        </div>
+    </div>
+    </section>
+
+    <section id="faq" class="section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>Q: What are your opening hours?</h3>
+            <p>Our restaurant is open from 8:00 AM to 10:00 PM, Monday to Sunday.</p>
+        </div>
+        <div class="faq">
+            <h3>Q: Do you offer vegetarian options?</h3>
+            <p>Yes, we have a variety of vegetarian options available on our menu. Please ask our staff for recommendations.</p>
+        </div>
+        <div class="faq">
+            <h3>Q: Is your restaurant family-friendly?</h3>
+            <p>Yes, we welcome families! Our restaurant has a family-friendly atmosphere and offers menu options suitable for all ages.</p>
+        </div>
+        <div class="faq">
+            <h3>Q: Are there any gluten-free options available?</h3>
+            <p>Yes, we have gluten-free options on our menu. Please inform our staff about any dietary restrictions, and they will be happy to assist you.</p>
+          </div>
+
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <h3>ricearoma7@gmail.com</h3>
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <script>
+        const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = form.elements.name.value;
+  const email = form.elements.email.value;
+  const message = form.elements.message.value;
+
+  if (!name || !email || !message) {
+    alert('Please fill out the form.');
+  } else {
+    alert('Email Sent!');
+    form.reset();
+  }
+});
+    </script>
+    
+    <footer>
+        <p>&copy; 2023 Rice Aroma. All rights reserved.</p>
+    </footer>
+    <button id="scrollToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+        const scrollToTopButton = document.getElementById('scrollToTopBtn');
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Montage - Rice Aroma</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="montagestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo"><img src="images/logo.png" alt="Rice Aroma Logo"></a>
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <li><a href = "review.html">FAQs</a></li>
+            </ul>   
+        </nav>
+    </header>
+
+    <section id="montage" class="section">
+        <h1>Montage</h1>
+
+        <div class = "video-container">
+            <video src="video/friedrice.mp4" controls>
+            </video>
+            <h2>PRESENTATION</h2>
+        </div>
+        <div class = "video-container2">
+            <video src="video/making.mp4" controls>
+            </video>
+            <h2>MAKING</h2>
+        </div>
+        <div class = "video-container3">
+            <video src="video/tasting.mp4" controls>
+            </video>
+            <h2>TASTING</h2>
+        </div>
+
+    </section>
+    
+    <button id="scrollToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        const scrollToTopButton = document.getElementById('scrollToTopBtn');
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2023 Rice Aroma. All rights reserved.</p>
+    </footer>
+</body>
+</html>
